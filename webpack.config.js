@@ -16,6 +16,7 @@ module.exports = (env) => {
             })
         )
     }
+    return {
     entry: './src/index.js',
         output: {
             path: path.resolve(__dirname, 'build'),
@@ -41,5 +42,6 @@ module.exports = (env) => {
         }
     ]
   },
+  }
     plugins: plugins
 };
