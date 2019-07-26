@@ -1,9 +1,18 @@
 import React from 'react';
 
-const TodoList = props => <div id={props.taskId}>
+const TodoList = props => (<div>
                             <ul>
-                                <li>Task to do: {props.taskName}</li>
+                              {
+                                props.tasks.map((data) => {
+                                  return (
+                                    <li key={data.id}>
+                                      Task to do: {data.text}
+                                    </li>
+                                  );
+                                })
+                              }
                             </ul>    
-                          </div>;
+                          </div>
+);
 
 export default TodoList;
